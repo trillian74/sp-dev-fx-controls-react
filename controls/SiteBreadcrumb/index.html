@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>SiteBreadcrumb - SharePoint Framework React Controls</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "SiteBreadcrumb";
+    var mkdocs_page_input_path = "controls/SiteBreadcrumb.md";
+    var mkdocs_page_url = "/controls/SiteBreadcrumb/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SharePoint Framework React Controls</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../getting-started/">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Controls</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../FileTypeIcon/">FileTypeIcon</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ListView/">ListView</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Placeholder/">Placeholder</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">SiteBreadcrumb</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#sitebreadcrumb-component">SiteBreadcrumb component</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#how-to-use-this-component-in-your-solutions">How to use this component in your solutions</a></li>
+        
+            <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">Release notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/license/">License</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SharePoint Framework React Controls</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Controls &raquo;</li>
+        
+      
+    
+    <li>SiteBreadcrumb</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/blob/master/docs/documentation/docs/controls/SiteBreadcrumb.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="sitebreadcrumb-component">SiteBreadcrumb component</h1>
+<p>This component returns a breadcrumb based on the current location.</p>
+<p><img alt="SiteBreadcrumb component output" src="../../assets/SiteBreadcrumb.png" />
+<img alt="Hover over an item" src="../../assets/SiteBreadcrumb-selected.png" /></p>
+<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions</h2>
+<ol>
+<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+<li>Import the following modules to your component:</li>
+</ol>
+<pre><code class="TypeScript">import { SiteBreadcrumb } from &quot;@pnp/spfx-controls-react/lib/SiteBreadcrumb&quot;;
+</code></pre>
+
+<ol>
+<li>Use the <code>SiteBreadcrumb</code> component in your code as follows:</li>
+</ol>
+<pre><code class="TypeScript">&lt;SiteBreadcrumb context={this.props.context} /&gt;
+</code></pre>
+
+<h2 id="implementation">Implementation</h2>
+<p>The SiteBreadcrumb component can be configured with the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td>WebPartContext OR ApplicationCustomizerContext</td>
+<td>yes</td>
+<td>Pass the context of your web part or application customizer extension.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/SiteBreadcrumb" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about/release-notes/" class="btn btn-neutral float-right" title="Release notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Placeholder/" class="btn btn-neutral" title="Placeholder"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Placeholder/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../about/release-notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

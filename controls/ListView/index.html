@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>ListView - SharePoint Framework React Controls</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ListView";
+    var mkdocs_page_input_path = "controls/ListView.md";
+    var mkdocs_page_url = "/controls/ListView/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SharePoint Framework React Controls</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../getting-started/">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Controls</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../FileTypeIcon/">FileTypeIcon</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">ListView</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#listview-component">ListView component</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#how-to-use-this-component-in-your-solutions">How to use this component in your solutions</a></li>
+        
+            <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Placeholder/">Placeholder</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../SiteBreadcrumb/">SiteBreadcrumb</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">Release notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/license/">License</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SharePoint Framework React Controls</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Controls &raquo;</li>
+        
+      
+    
+    <li>ListView</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/blob/master/docs/documentation/docs/controls/ListView.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="listview-component">ListView component</h1>
+<p>This component renders a list view for the given set of items.</p>
+<p><img alt="ListView component output" src="../../assets/ListView.png" /></p>
+<p><strong>List view control with grouping applied</strong></p>
+<p><img alt="ListView component with grouping" src="../../assets/ListView-grouping.png" /></p>
+<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions</h2>
+<ol>
+<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+<li>Import the following modules to your component:</li>
+</ol>
+<pre><code class="TypeScript">import { ListView, IViewField, SelectionMode, GroupOrder, IGrouping } from &quot;@pnp/spfx-controls-react/lib/ListView&quot;;
+</code></pre>
+
+<ol>
+<li>Use the <code>ListView</code> component in your code as follows:</li>
+</ol>
+<pre><code class="TypeScript">&lt;ListView
+  items={items}
+  viewFields={viewFields}
+  iconFieldName=&quot;ServerRelativeUrl&quot;
+  compact={true}
+  selectionMode={SelectionMode.multiple}
+  selection={this._getSelection}
+  groupByFields={groupByFields} /&gt;
+</code></pre>
+
+<ol>
+<li>With the <code>selection</code> property you can define a method that which gets called when the user selects one or more items in the list view:</li>
+</ol>
+<pre><code class="typescript">private _getSelection(items: any[]) {
+  console.log('Selected items:', items);
+}
+</code></pre>
+
+<ol>
+<li>With the <code>groupByFields</code> property you can define an array of field objects which will be used for grouping. </li>
+</ol>
+<p><strong>Important</strong>: the same order of the fields defines how grouping will be applied. In the snippet the <code>ListView</code> control will first group by the <code>Extension</code> and after that by the <code>Author</code> field.</p>
+<pre><code class="TypeScript">const groupByFields: IGrouping[] = [
+  {
+    name: &quot;Extension&quot;, 
+    order: GroupOrder.ascending 
+  }, {
+    name: &quot;Author&quot;, 
+    order: GroupOrder.descending
+  }
+];
+</code></pre>
+
+<h2 id="implementation">Implementation</h2>
+<p>The Placeholder component can be configured with the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iconFieldName</td>
+<td>string</td>
+<td>no</td>
+<td>Specify the name of the file URL path which will be used to show the file icon.</td>
+</tr>
+<tr>
+<td>items</td>
+<td>any[]</td>
+<td>yes</td>
+<td>Items to render in the list view.</td>
+</tr>
+<tr>
+<td>viewFields</td>
+<td>IViewField[]</td>
+<td>no</td>
+<td>The fields you want to render in the list view. Check the <code>IViewField</code> implementation to see which properties you can define.</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>boolean</td>
+<td>no</td>
+<td>Boolean value to indicate if the component should render in compact mode. By default this is set to <code>false</code>.</td>
+</tr>
+<tr>
+<td>selectionMode</td>
+<td>SelectionMode</td>
+<td>no</td>
+<td>Specify if the items in the list view can be selected and how. Options are: none, single, multi.</td>
+</tr>
+<tr>
+<td>selection</td>
+<td>function</td>
+<td>no</td>
+<td>Selection event that passes the selected item(s) from the list view.</td>
+</tr>
+<tr>
+<td>groupByFields</td>
+<td>IGrouping[]</td>
+<td>no</td>
+<td>Defines the field on which you want to group the items in the list view.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>IViewField</code> has the following implementation:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>yes</td>
+<td>Name of the field.</td>
+</tr>
+<tr>
+<td>displayName</td>
+<td>string</td>
+<td>no</td>
+<td>Name that will be used as the column title. If not defined, the name property will be used.</td>
+</tr>
+<tr>
+<td>linkPropertyName</td>
+<td>string</td>
+<td>no</td>
+<td>Specify the field name that needs to be used to render a link for the current field.</td>
+</tr>
+<tr>
+<td>sorting</td>
+<td>boolean</td>
+<td>no</td>
+<td>Specify if you want to enable sorting for the current field.</td>
+</tr>
+<tr>
+<td>maxWidth</td>
+<td>number</td>
+<td>no</td>
+<td>Specify the minimum width of the column.</td>
+</tr>
+<tr>
+<td>maxWidth</td>
+<td>number</td>
+<td>no</td>
+<td>Specify the maximum width of the column.</td>
+</tr>
+<tr>
+<td>render</td>
+<td>function</td>
+<td>no</td>
+<td>Override how the field has to get rendered.</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>IGrouping</code> has the following implementation:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>yes</td>
+<td>Name of the field</td>
+</tr>
+<tr>
+<td>order</td>
+<td>GroupOrder</td>
+<td>yes</td>
+<td>Specify how the group needs to be ordered.</td>
+</tr>
+</tbody>
+</table>
+<p>enum <code>GroupOrder</code></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ascending</td>
+<td>Order the group in ascending order.</td>
+</tr>
+<tr>
+<td>descending</td>
+<td>Order the group in descending order.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/ListView" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Placeholder/" class="btn btn-neutral float-right" title="Placeholder">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../FileTypeIcon/" class="btn btn-neutral" title="FileTypeIcon"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../FileTypeIcon/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Placeholder/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

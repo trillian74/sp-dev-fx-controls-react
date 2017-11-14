@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Placeholder - SharePoint Framework React Controls</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Placeholder";
+    var mkdocs_page_input_path = "controls/Placeholder.md";
+    var mkdocs_page_url = "/controls/Placeholder/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> SharePoint Framework React Controls</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../getting-started/">Getting started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Controls</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../FileTypeIcon/">FileTypeIcon</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ListView/">ListView</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Placeholder</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#placeholder-component">Placeholder component</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#how-to-use-this-component-in-your-solutions">How to use this component in your solutions</a></li>
+        
+            <li><a class="toctree-l4" href="#implementation">Implementation</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../SiteBreadcrumb/">SiteBreadcrumb</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">About</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../about/release-notes/">Release notes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../about/license/">License</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">SharePoint Framework React Controls</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Controls &raquo;</li>
+        
+      
+    
+    <li>Placeholder</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/blob/master/docs/documentation/docs/controls/Placeholder.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="placeholder-component">Placeholder component</h1>
+<p>This component renders a placeholder which can be used to show a message that the web part still has to be configured.</p>
+<p><img alt="Placeholder component output" src="../../assets/Placeholder.png" /></p>
+<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions</h2>
+<ol>
+<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+<li>Import the following modules to your component:</li>
+</ol>
+<pre><code class="TypeScript">import { Placeholder } from &quot;@pnp/spfx-controls-react/lib/Placeholder&quot;;
+</code></pre>
+
+<ol>
+<li>Use the <code>Placeholder</code> component in your code as follows:</li>
+</ol>
+<pre><code class="TypeScript">&lt;Placeholder
+  iconName='Edit'
+  iconText='Configure your web part'
+  description='Please configure the web part.'
+  buttonLabel='Configure'
+  onConfigure={this._onConfigure} /&gt;
+</code></pre>
+
+<ol>
+<li>With the <code>onConfigure</code> property you can define what it needs to do when you click on the button. Like for example opening the property pane:</li>
+</ol>
+<pre><code class="typescript">private _onConfigure() {
+  // Context of the web part
+  this.props.context.propertyPane.open();
+}
+</code></pre>
+
+<h2 id="implementation">Implementation</h2>
+<p>The placeholder component can be configured with the following properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>buttonLabel</td>
+<td>string</td>
+<td>no</td>
+<td>Text label to be displayed on the button bellow the description. The button is optional.</td>
+</tr>
+<tr>
+<td>contentClassName</td>
+<td>string</td>
+<td>no</td>
+<td>This is the className that is applied to the root element of the content zone. You can use this to apply custom styles to the placeholder.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>string</td>
+<td>yes</td>
+<td>Text description for the placeholder. This appears bellow the Icon and IconText.</td>
+</tr>
+<tr>
+<td>iconName</td>
+<td>string</td>
+<td>yes</td>
+<td>The name of the icon that will be used in the placeholder. This is the same name as you can find on the Office UI Fabric icons page: <a href="https://dev.office.com/fabric#/styles/icons">Office UI Fabric icons</a>. For example: <code>Page</code> or <code>Add</code>.</td>
+</tr>
+<tr>
+<td>iconText</td>
+<td>string</td>
+<td>yes</td>
+<td>Heading text which is displayed next to the icon.</td>
+</tr>
+<tr>
+<td>onConfigure</td>
+<td>function</td>
+<td>no</td>
+<td>onConfigure handler for the button. The button is optional.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/Placeholder" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SiteBreadcrumb/" class="btn btn-neutral float-right" title="SiteBreadcrumb">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ListView/" class="btn btn-neutral" title="ListView"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SharePoint/sp-dev-fx-property-controls/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../ListView/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../SiteBreadcrumb/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>

@@ -331,8 +331,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -385,6 +385,18 @@
   <li class="md-nav__item">
     <a href="../SiteBreadcrumb/" title="SiteBreadcrumb" class="md-nav__link">
       SiteBreadcrumb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebPartTitle/" title="WebPartTitle" class="md-nav__link">
+      WebPartTitle
     </a>
   </li>
 
@@ -463,8 +475,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -493,21 +505,21 @@
                   <a href="https://github.com/SharePoint/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/controls/FileTypeIcon.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="filetypeicon-component">FileTypeIcon component<a class="headerlink" href="#filetypeicon-component" title="Permanent link">&para;</a></h1>
-<p>This component returns the file type icon based on a specified file path or application.</p>
-<p><img alt="FileTypeIcon component output" src="../../assets/FileTypeIcon.png" /></p>
-<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions<a class="headerlink" href="#how-to-use-this-component-in-your-solutions" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+                <h1 id="filetypeicon-control">FileTypeIcon control<a class="headerlink" href="#filetypeicon-control" title="Permanent link">&para;</a></h1>
+<p>This control returns the file type icon based on a specified file path or application.</p>
+<p><img alt="FileTypeIcon control output" src="../../assets/FileTypeIcon.png" /></p>
+<h2 id="how-to-use-this-control-in-your-solutions">How to use this control in your solutions<a class="headerlink" href="#how-to-use-this-control-in-your-solutions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check that you installed the <code>@pnp/spfx-controls-react</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
 <li>Import the following modules to your component:</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">FileTypeIcon</span><span class="p">,</span> <span class="nx">ApplicationType</span><span class="p">,</span> <span class="nx">IconType</span><span class="p">,</span> <span class="nx">ImageSize</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/FileTypeIcon&quot;</span><span class="p">;</span>
 </pre></div>
 
 
-<ol>
-<li>Use the <code>FileTypeIcon</code> component in your code as follows:</li>
-</ol>
+<ul>
+<li>Use the <code>FileTypeIcon</code> control in your code as follows:</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="cm">/* Showing the icons font */</span>
 <span class="o">&lt;</span><span class="nx">FileTypeIcon</span> <span class="nx">type</span><span class="o">=</span><span class="p">{</span><span class="nx">IconType</span><span class="p">.</span><span class="nx">font</span><span class="p">}</span> <span class="nx">application</span><span class="o">=</span><span class="p">{</span><span class="nx">ApplicationType</span><span class="p">.</span><span class="nx">Word</span><span class="p">}</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="nx">FileTypeIcon</span> <span class="nx">type</span><span class="o">=</span><span class="p">{</span><span class="nx">IconType</span><span class="p">.</span><span class="nx">font</span><span class="p">}</span> <span class="nx">application</span><span class="o">=</span><span class="p">{</span><span class="nx">ApplicationType</span><span class="p">.</span><span class="nx">Excel</span><span class="p">}</span> <span class="o">/&gt;</span>
@@ -547,7 +559,7 @@
 <td>path</td>
 <td>string</td>
 <td>no</td>
-<td>Path to the document. If this is provided, the component will use the file extension to display the corresponding icon.</td>
+<td>Path to the document. If this is provided, the control will use the file extension to display the corresponding icon.</td>
 </tr>
 <tr>
 <td>size</td>

@@ -343,8 +343,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -385,6 +385,18 @@
   <li class="md-nav__item">
     <a href="../SiteBreadcrumb/" title="SiteBreadcrumb" class="md-nav__link">
       SiteBreadcrumb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebPartTitle/" title="WebPartTitle" class="md-nav__link">
+      WebPartTitle
     </a>
   </li>
 
@@ -463,8 +475,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -493,23 +505,23 @@
                   <a href="https://github.com/SharePoint/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/controls/ListView.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="listview-component">ListView component<a class="headerlink" href="#listview-component" title="Permanent link">&para;</a></h1>
-<p>This component renders a list view for the given set of items.</p>
-<p><img alt="ListView component output" src="../../assets/ListView.png" /></p>
+                <h1 id="listview-control">ListView control<a class="headerlink" href="#listview-control" title="Permanent link">&para;</a></h1>
+<p>This control renders a list view for the given set of items.</p>
+<p><img alt="ListView control output" src="../../assets/ListView.png" /></p>
 <p><strong>List view control with grouping applied</strong></p>
-<p><img alt="ListView component with grouping" src="../../assets/ListView-grouping.png" /></p>
-<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions<a class="headerlink" href="#how-to-use-this-component-in-your-solutions" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+<p><img alt="ListView control with grouping" src="../../assets/ListView-grouping.png" /></p>
+<h2 id="how-to-use-this-control-in-your-solutions">How to use this control in your solutions<a class="headerlink" href="#how-to-use-this-control-in-your-solutions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check that you installed the <code>@pnp/spfx-controls-react</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
 <li>Import the following modules to your component:</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">ListView</span><span class="p">,</span> <span class="nx">IViewField</span><span class="p">,</span> <span class="nx">SelectionMode</span><span class="p">,</span> <span class="nx">GroupOrder</span><span class="p">,</span> <span class="nx">IGrouping</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/ListView&quot;</span><span class="p">;</span>
 </pre></div>
 
 
-<ol>
-<li>Use the <code>ListView</code> component in your code as follows:</li>
-</ol>
+<ul>
+<li>Use the <code>ListView</code> control in your code as follows:</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">ListView</span>
   <span class="nx">items</span><span class="o">=</span><span class="p">{</span><span class="nx">items</span><span class="p">}</span>
   <span class="nx">viewFields</span><span class="o">=</span><span class="p">{</span><span class="nx">viewFields</span><span class="p">}</span>
@@ -521,18 +533,18 @@
 </pre></div>
 
 
-<ol>
+<ul>
 <li>With the <code>selection</code> property you can define a method that which gets called when the user selects one or more items in the list view:</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kr">private</span> <span class="nx">_getSelection</span><span class="p">(</span><span class="nx">items</span>: <span class="kt">any</span><span class="p">[])</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Selected items:&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<ol>
+<ul>
 <li>With the <code>groupByFields</code> property you can define an array of field objects which will be used for grouping. </li>
-</ol>
+</ul>
 <p><strong>Important</strong>: the same order of the fields defines how grouping will be applied. In the snippet the <code>ListView</code> control will first group by the <code>Extension</code> and after that by the <code>Author</code> field.</p>
 <div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">groupByFields</span>: <span class="kt">IGrouping</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span>
@@ -547,7 +559,7 @@
 
 
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The Placeholder component can be configured with the following properties:</p>
+<p>The ListView control can be configured with the following properties:</p>
 <table>
 <thead>
 <tr>
@@ -580,7 +592,7 @@
 <td>compact</td>
 <td>boolean</td>
 <td>no</td>
-<td>Boolean value to indicate if the component should render in compact mode. By default this is set to <code>false</code>.</td>
+<td>Boolean value to indicate if the control should render in compact mode. By default this is set to <code>false</code>.</td>
 </tr>
 <tr>
 <td>selectionMode</td>

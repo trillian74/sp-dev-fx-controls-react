@@ -355,8 +355,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -385,6 +385,18 @@
   <li class="md-nav__item">
     <a href="../SiteBreadcrumb/" title="SiteBreadcrumb" class="md-nav__link">
       SiteBreadcrumb
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../WebPartTitle/" title="WebPartTitle" class="md-nav__link">
+      WebPartTitle
     </a>
   </li>
 
@@ -463,8 +475,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-component-in-your-solutions" title="How to use this component in your solutions" class="md-nav__link">
-    How to use this component in your solutions
+  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
+    How to use this control in your solutions
   </a>
   
 </li>
@@ -493,21 +505,21 @@
                   <a href="https://github.com/SharePoint/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/controls/Placeholder.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="placeholder-component">Placeholder component<a class="headerlink" href="#placeholder-component" title="Permanent link">&para;</a></h1>
-<p>This component renders a placeholder which can be used to show a message that the web part still has to be configured.</p>
-<p><img alt="Placeholder component output" src="../../assets/Placeholder.png" /></p>
-<h2 id="how-to-use-this-component-in-your-solutions">How to use this component in your solutions<a class="headerlink" href="#how-to-use-this-component-in-your-solutions" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Check that you installed the <code>@pnp/dev-controls</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
+                <h1 id="placeholder-control">Placeholder control<a class="headerlink" href="#placeholder-control" title="Permanent link">&para;</a></h1>
+<p>This control renders a placeholder which can be used to show a message that the web part still has to be configured.</p>
+<p><img alt="Placeholder control output" src="../../assets/Placeholder.png" /></p>
+<h2 id="how-to-use-this-control-in-your-solutions">How to use this control in your solutions<a class="headerlink" href="#how-to-use-this-control-in-your-solutions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check that you installed the <code>@pnp/spfx-controls-react</code> dependency. Check out the <a href="../../getting-started">getting started</a> page for more information about installing the dependency.</li>
 <li>Import the following modules to your component:</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Placeholder</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/Placeholder&quot;</span><span class="p">;</span>
 </pre></div>
 
 
-<ol>
-<li>Use the <code>Placeholder</code> component in your code as follows:</li>
-</ol>
+<ul>
+<li>Use the <code>Placeholder</code> control in your code as follows:</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">Placeholder</span>
   <span class="nx">iconName</span><span class="o">=</span><span class="s1">&#39;Edit&#39;</span>
   <span class="nx">iconText</span><span class="o">=</span><span class="s1">&#39;Configure your web part&#39;</span>
@@ -517,9 +529,9 @@
 </pre></div>
 
 
-<ol>
+<ul>
 <li>With the <code>onConfigure</code> property you can define what it needs to do when you click on the button. Like for example opening the property pane:</li>
-</ol>
+</ul>
 <div class="codehilite"><pre><span></span><span class="kr">private</span> <span class="nx">_onConfigure() {</span>
   <span class="c1">// Context of the web part</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">context</span><span class="p">.</span><span class="nx">propertyPane</span><span class="p">.</span><span class="nx">open</span><span class="p">();</span>
@@ -528,7 +540,7 @@
 
 
 <h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The placeholder component can be configured with the following properties:</p>
+<p>The placeholder control can be configured with the following properties:</p>
 <table>
 <thead>
 <tr>

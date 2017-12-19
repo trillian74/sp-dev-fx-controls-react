@@ -147,13 +147,18 @@
         }, 
         {
             "location": "/about/release-notes/", 
-            "text": "Releases\n\n\n1.0.0\n\n\n\n\nNew control\n: WebPartTilte control got added.\n\n\nEnhancement\n: ListView control got extended with the ability to specify a set of preselected items.\n\n\n\n\nBeta 1.0.0-beta.8\n\n\n\n\nBug fix\n: bug fix for the \nListView\n control when selection is used in combination with \nsetState\n.\n\n\n\n\nBeta 1.0.0-beta.7\n\n\nAdded\n\n- Grouping functionality added to the \nListView\n control\n\n\nBeta 1.0.0-beta.6\n\n\n\n\nInitial release", 
+            "text": "Releases\n\n\n1.1.0\n\n\n\n\nTelemetry added\n\n\n\n\n1.0.0\n\n\n\n\nNew control\n: WebPartTilte control got added.\n\n\nEnhancement\n: ListView control got extended with the ability to specify a set of preselected items.\n\n\n\n\nBeta 1.0.0-beta.8\n\n\n\n\nBug fix\n: bug fix for the \nListView\n control when selection is used in combination with \nsetState\n.\n\n\n\n\nBeta 1.0.0-beta.7\n\n\nAdded\n\n- Grouping functionality added to the \nListView\n control\n\n\nBeta 1.0.0-beta.6\n\n\n\n\nInitial release", 
             "title": "Release notes"
         }, 
         {
             "location": "/about/release-notes/#releases", 
             "text": "", 
             "title": "Releases"
+        }, 
+        {
+            "location": "/about/release-notes/#110", 
+            "text": "Telemetry added", 
+            "title": "1.1.0"
         }, 
         {
             "location": "/about/release-notes/#100", 

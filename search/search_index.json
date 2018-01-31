@@ -2,48 +2,33 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Reusable React controls for your SharePoint Framework solutions\n\n\nThis repository provides developers with a set of reusable React controls that can be used in SharePoint Framework (SPFx) solutions.\n\n\nGetting started\n\n\nCheck out how to get started here: \nGetting started\n.\n\n\nAvailable controls\n\n\nThe following controls are currently available:\n\n\n\n\nFileTypeIcon\n (Control that shows the icon of a specified file path or application)\n\n\nListView\n (List view control)\n\n\nPlaceholder\n (Control that can be used to show an initial placeholder if the web part has to be configured)\n\n\nSiteBreadcrumb\n (Breadcrumb control)\n\n\nWebPartTitle\n (Customizable web part title control)", 
+            "text": "Reusable React controls for your SharePoint Framework solutions\n\n\nThis repository provides developers with a set of reusable React controls that can be used in SharePoint Framework (SPFx) solutions. The project provides controls for building web parts and extensions.\n\n\nGetting started\n\n\nInstallation\n\n\nTo get started you have to install the following dependency to your project: \n@pnp/spfx-controls-react\n.\n\n\nEnter the following command to install the dependency to your project:\n\n\nnpm install @pnp/spfx-controls-react --save --save-exact\n\n\n\n\n\nConfiguration\n\n\nOnce the package is installed, you will have to configure the resource file of the property controls to be used in your project. You can do this by opening the \nconfig/config.json\n and adding the following line to the \nlocalizedResources\n property:\n\n\nControlStrings\n:\n \n./node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js\n\n\n\n\n\n\nAvailable controls\n\n\nThe following controls are currently available:\n\n\n\n\nFileTypeIcon\n (Control that shows the icon of a specified file path or application)\n\n\nListView\n (List view control)\n\n\nPlaceholder\n (Control that can be used to show an initial placeholder if the web part has to be configured)\n\n\nSiteBreadcrumb\n (Breadcrumb control)\n\n\nWebPartTitle\n (Customizable web part title control)\n\n\nIFrameDialog\n (renders a Dialog with an iframe as a content)\n\n\n\n\nField customizer controls:\n\n\n\n\nNote\n: If you want to use these controls in your solution, first check out the start guide for these controls: \nusing the field controls\n.\n\n\n\n\n\n\nFieldAttachmentsRenderer\n (renders Clip icon based on the provided \ncount\n property is defined and greater than 0)\n\n\nFieldDateRenderer\n (renders date string as a simple text)\n\n\nFieldFileTypeRenderer\n (renders document or folder icon based on file path)\n\n\nFieldLookupRenderer\n (renders lookup values)\n\n\nFieldNameRenderer\n (renders document's name as a link)\n\n\nFieldTaxonomyRenderer\n (renders terms from Managed Metadata field)\n\n\nFieldTextRenderer\n (renders simple text)\n\n\nFieldTitleRenderer\n (renders title either as a simple text or as a link to the Dislpay Form)\n\n\nFieldUrlRenderer\n (renders Hyperlink or Picture field value as a link or image)\n\n\nFieldUserRenderer\n (renders each referenced user/group as a link on a separate line)", 
             "title": "Home"
         }, 
         {
             "location": "/#reusable-react-controls-for-your-sharepoint-framework-solutions", 
-            "text": "This repository provides developers with a set of reusable React controls that can be used in SharePoint Framework (SPFx) solutions.", 
+            "text": "This repository provides developers with a set of reusable React controls that can be used in SharePoint Framework (SPFx) solutions. The project provides controls for building web parts and extensions.", 
             "title": "Reusable React controls for your SharePoint Framework solutions"
         }, 
         {
             "location": "/#getting-started", 
-            "text": "Check out how to get started here:  Getting started .", 
-            "title": "Getting started"
-        }, 
-        {
-            "location": "/#available-controls", 
-            "text": "The following controls are currently available:   FileTypeIcon  (Control that shows the icon of a specified file path or application)  ListView  (List view control)  Placeholder  (Control that can be used to show an initial placeholder if the web part has to be configured)  SiteBreadcrumb  (Breadcrumb control)  WebPartTitle  (Customizable web part title control)", 
-            "title": "Available controls"
-        }, 
-        {
-            "location": "/getting-started/", 
-            "text": "Getting started\n\n\nInstallation\n\n\nTo get started you have to install the following dependency to your project: \n@pnp/spfx-controls-react\n.\n\n\nEnter the following command to install the dependency to your project:\n\n\nnpm install @pnp/spfx-controls-react --save --save-exact\n\n\n\n\n\nConfiguration\n\n\nOnce the package is installed, you will have to configure the resource file of the property controls to be used in your project. You can do this by opening the \nconfig/config.json\n and adding the following line to the \nlocalizedResources\n property:\n\n\nControlStrings\n:\n \n./node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js\n\n\n\n\n\n\nNext Steps\n\n\nOnce you installed the dependency you can start using the controls in your solution. Go to the homepage of the documentation to get an overview of all the available controls: \nhome\n.", 
-            "title": "Getting started"
-        }, 
-        {
-            "location": "/getting-started/#getting-started", 
             "text": "", 
             "title": "Getting started"
         }, 
         {
-            "location": "/getting-started/#installation", 
+            "location": "/#installation", 
             "text": "To get started you have to install the following dependency to your project:  @pnp/spfx-controls-react .  Enter the following command to install the dependency to your project:  npm install @pnp/spfx-controls-react --save --save-exact", 
             "title": "Installation"
         }, 
         {
-            "location": "/getting-started/#configuration", 
+            "location": "/#configuration", 
             "text": "Once the package is installed, you will have to configure the resource file of the property controls to be used in your project. You can do this by opening the  config/config.json  and adding the following line to the  localizedResources  property:  ControlStrings :   ./node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js", 
             "title": "Configuration"
         }, 
         {
-            "location": "/getting-started/#next-steps", 
-            "text": "Once you installed the dependency you can start using the controls in your solution. Go to the homepage of the documentation to get an overview of all the available controls:  home .", 
-            "title": "Next Steps"
+            "location": "/#available-controls", 
+            "text": "The following controls are currently available:   FileTypeIcon  (Control that shows the icon of a specified file path or application)  ListView  (List view control)  Placeholder  (Control that can be used to show an initial placeholder if the web part has to be configured)  SiteBreadcrumb  (Breadcrumb control)  WebPartTitle  (Customizable web part title control)  IFrameDialog  (renders a Dialog with an iframe as a content)   Field customizer controls:   Note : If you want to use these controls in your solution, first check out the start guide for these controls:  using the field controls .    FieldAttachmentsRenderer  (renders Clip icon based on the provided  count  property is defined and greater than 0)  FieldDateRenderer  (renders date string as a simple text)  FieldFileTypeRenderer  (renders document or folder icon based on file path)  FieldLookupRenderer  (renders lookup values)  FieldNameRenderer  (renders document's name as a link)  FieldTaxonomyRenderer  (renders terms from Managed Metadata field)  FieldTextRenderer  (renders simple text)  FieldTitleRenderer  (renders title either as a simple text or as a link to the Dislpay Form)  FieldUrlRenderer  (renders Hyperlink or Picture field value as a link or image)  FieldUserRenderer  (renders each referenced user/group as a link on a separate line)", 
+            "title": "Available controls"
         }, 
         {
             "location": "/controls/FileTypeIcon/", 
@@ -146,14 +131,334 @@
             "title": "Implementation"
         }, 
         {
+            "location": "/controls/IFrameDialog/", 
+            "text": "IFrameDialog control\n\n\nThis control renders a Dialog with an iframe as a content.\n\n\nHere is an example of the control in action:\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nIFrameDialog\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/IFrameDialog\n;\n\n\n\n\n\n\n\n\nUse the \nIFrameDialog\n control in your code as follows:\n\n\n\n\nIFrameDialog\n \n    \nurl\n=\n{\nthis\n.\nstate\n.\nlookupDispFormUrl\n}\n\n    \niframeOnLoad\n=\n{\nthis\n.\n_onIframeLoaded\n.\nbind\n(\nthis\n)}\n\n    \nhidden\n=\n{\nthis\n.\nstate\n.\nhideDialog\n}\n\n    \nonDismiss\n=\n{\nthis\n.\n_onDialogDismiss\n.\nbind\n(\nthis\n)}\n\n    \nmodalProps\n=\n{{\n\n        \nisBlocking\n: \ntrue\n,\n\n        \ncontainerClassName\n: \nstyles.dialogContainer\n\n    \n}}\n\n    \ndialogContentProps\n=\n{{\n\n        \ntype\n: \nDialogType.close\n,\n\n        \nshowCloseButton\n: \ntrue\n\n    \n}}\n\n    \nwidth\n=\n{\n570px\n}\n\n    \nheight\n=\n{\n315px\n}\n/\n\n\n\n\n\n\nImplementation\n\n\nThe IFrameDialog component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ndialogContentProps\n\n\nIDialogContentProps\n\n\nno\n\n\nProps to be passed through to Dialog Content.\n\n\n\n\n\n\nhidden\n\n\nboolean\n\n\nno\n\n\nWhether the dialog is hidden.\n\n\n\n\n\n\nmodalProps\n\n\nIModalProps\n\n\nno\n\n\nProps to be passed through to Modal.\n\n\n\n\n\n\nonDismiss\n\n\n(ev?: React.MouseEvent\n) =\n any\n\n\nno\n\n\nA callback function for when the Dialog is dismissed from the close button or light dismiss. Can also be specified separately in content and modal.\n\n\n\n\n\n\nurl\n\n\nstring\n\n\nyes\n\n\niframe Url\n\n\n\n\n\n\niframeOnload\n\n\niframeOnLoad?: (iframe: any) =\n {}\n\n\nno\n\n\niframe's onload event handler\n\n\n\n\n\n\nwidth\n\n\nstring\n\n\nyes\n\n\niframe's width\n\n\n\n\n\n\nheigth\n\n\nstring\n\n\nyes\n\n\niframe's height", 
+            "title": "IFrameDialog"
+        }, 
+        {
+            "location": "/controls/IFrameDialog/#iframedialog-control", 
+            "text": "This control renders a Dialog with an iframe as a content.  Here is an example of the control in action:", 
+            "title": "IFrameDialog control"
+        }, 
+        {
+            "location": "/controls/IFrameDialog/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   IFrameDialog   }   from   @pnp/spfx-controls-react/lib/IFrameDialog ;    Use the  IFrameDialog  control in your code as follows:   IFrameDialog  \n     url = { this . state . lookupDispFormUrl } \n     iframeOnLoad = { this . _onIframeLoaded . bind ( this )} \n     hidden = { this . state . hideDialog } \n     onDismiss = { this . _onDialogDismiss . bind ( this )} \n     modalProps = {{ \n         isBlocking :  true , \n         containerClassName :  styles.dialogContainer \n     }} \n     dialogContentProps = {{ \n         type :  DialogType.close , \n         showCloseButton :  true \n     }} \n     width = { 570px } \n     height = { 315px } /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/IFrameDialog/#implementation", 
+            "text": "The IFrameDialog component can be configured with the following properties:     Property  Type  Required  Description      dialogContentProps  IDialogContentProps  no  Props to be passed through to Dialog Content.    hidden  boolean  no  Whether the dialog is hidden.    modalProps  IModalProps  no  Props to be passed through to Modal.    onDismiss  (ev?: React.MouseEvent ) =  any  no  A callback function for when the Dialog is dismissed from the close button or light dismiss. Can also be specified separately in content and modal.    url  string  yes  iframe Url    iframeOnload  iframeOnLoad?: (iframe: any) =  {}  no  iframe's onload event handler    width  string  yes  iframe's width    heigth  string  yes  iframe's height", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/main/", 
+            "text": "Field Customizer Out-of-the-box Fields Controls\n\n\nThese controls represent React controls that can be used in SPFx Field Customizers to provide rendering of the fields similar to out of the box experience. Additional benefit is ability to set custom css classes and styles to the component.\nRelated UserVoice requests:\n\n\nhttps://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform/suggestions/18810637-access-to-re-use-modern-field-render-controls\n\n\nhttps://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform/suggestions/31530607-field-customizer-ability-to-call-ootb-render-meth\n\n\nUsage\n\n\nThe main scenario to use this package is to import \nFieldRendererHelper\n class and to call \ngetFieldRenderer\n method. This method returns a Promise with a proper field renderer (\nPromise\nJSX.Element\n) based on field's type. It means that it will automatically select proper component that should be rendered in this or that field. This method also contains logic to correctly process field's value and get correct text to display (for example, Friendly Text for DateTime fields).\nAs the method returns \nPromise\n it should be called in one of React component lifecycle methods, for example, \ncomponentWillMount\n that will occur before \nrender\n. The resulting field renderer could be saved in the element's state and used later in \nrender\n method.\nHere is an example on how it can be used inside custom Field Customizer component (.tsx file):\n\n\nexport\n \ninterface\n \nIOotbFieldsState\n \n{\n\n  \nfieldRenderer?\n: \nJSX.Element\n;\n\n\n}\n\n\n\n//...\n\n\n\n@override\n\n  \npublic\n \ncomponentWillMount() {\n\n    \nFieldRendererHelper\n.\ngetFieldRenderer\n(\nthis\n.\nprops\n.\nvalue\n,\n \n{\n\n      \nclassName\n: \nthis.props.className\n,\n\n      \ncssProps\n: \nthis.props.cssProps\n\n    \n},\n \nthis\n.\nprops\n.\nlistItem\n,\n \nthis\n.\nprops\n.\ncontext\n).\nthen\n(\nfieldRenderer\n \n=\n \n{\n\n      \nthis\n.\nsetState\n({\n\n        \nfieldRenderer\n: \nfieldRenderer\n\n      \n});\n\n    \n});\n\n  \n}\n\n\n\npublic\n \nrender\n()\n:\n \nReact\n.\nReactElement\n{}\n \n{\n\n    \nreturn\n \n(\n\n      \ndiv\n \nclassName\n=\n{\nstyles\n.\ncell\n}\n\n        \n{\nthis\n.\nstate\n.\nfieldRenderer\n}\n\n      \n/div\n\n    \n);\n\n  \n}\n\n\n\n\n\n\nAdditionally, any of included components can be used by itself.\n\n\nFieldRendererHelper\n\n\nFieldRendererHelper\n class is a \nrecommended\n way to use Field Controls as it provides additional functionality to automatically render the content for any type of fields.\n\n\nAvailable Controls\n\n\nThe following Field Controls are currently available:\n\n\n\n\nFieldAttachmentsRenderer\n (renders Clip icon based on the provided \ncount\n property is defined and greater than 0)\n\n\nFieldDateRenderer\n (renders date string as a simple text)\n\n\nFieldFileTypeRenderer\n (renders document or folder icon based on file path)\n\n\nFieldLookupRenderer\n (renders lookup values)\n\n\nFieldNameRenderer\n (renders document's name as a link)\n\n\nFieldTaxonomyRenderer\n (renders terms from Managed Metadata field)\n\n\nFieldTextRenderer\n (renders simple text)\n\n\nFieldTitleRenderer\n (renders title either as a simple text or as a link to the Dislpay Form)\n\n\nFieldUrlRenderer\n (renders Hyperlink or Picture field value as a link or image)\n\n\nFieldUserRenderer\n (renders each referenced user/group as a link on a separate line)", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/controls/fields/main/#field-customizer-out-of-the-box-fields-controls", 
+            "text": "These controls represent React controls that can be used in SPFx Field Customizers to provide rendering of the fields similar to out of the box experience. Additional benefit is ability to set custom css classes and styles to the component.\nRelated UserVoice requests:  https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform/suggestions/18810637-access-to-re-use-modern-field-render-controls  https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform/suggestions/31530607-field-customizer-ability-to-call-ootb-render-meth", 
+            "title": "Field Customizer Out-of-the-box Fields Controls"
+        }, 
+        {
+            "location": "/controls/fields/main/#usage", 
+            "text": "The main scenario to use this package is to import  FieldRendererHelper  class and to call  getFieldRenderer  method. This method returns a Promise with a proper field renderer ( Promise JSX.Element ) based on field's type. It means that it will automatically select proper component that should be rendered in this or that field. This method also contains logic to correctly process field's value and get correct text to display (for example, Friendly Text for DateTime fields).\nAs the method returns  Promise  it should be called in one of React component lifecycle methods, for example,  componentWillMount  that will occur before  render . The resulting field renderer could be saved in the element's state and used later in  render  method.\nHere is an example on how it can be used inside custom Field Customizer component (.tsx file):  export   interface   IOotbFieldsState   { \n   fieldRenderer? :  JSX.Element ;  }  //...  @override \n   public   componentWillMount() { \n     FieldRendererHelper . getFieldRenderer ( this . props . value ,   { \n       className :  this.props.className , \n       cssProps :  this.props.cssProps \n     },   this . props . listItem ,   this . props . context ). then ( fieldRenderer   =   { \n       this . setState ({ \n         fieldRenderer :  fieldRenderer \n       }); \n     }); \n   }  public   render () :   React . ReactElement {}   { \n     return   ( \n       div   className = { styles . cell } \n         { this . state . fieldRenderer } \n       /div \n     ); \n   }   Additionally, any of included components can be used by itself.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/controls/fields/main/#fieldrendererhelper", 
+            "text": "FieldRendererHelper  class is a  recommended  way to use Field Controls as it provides additional functionality to automatically render the content for any type of fields.", 
+            "title": "FieldRendererHelper"
+        }, 
+        {
+            "location": "/controls/fields/main/#available-controls", 
+            "text": "The following Field Controls are currently available:   FieldAttachmentsRenderer  (renders Clip icon based on the provided  count  property is defined and greater than 0)  FieldDateRenderer  (renders date string as a simple text)  FieldFileTypeRenderer  (renders document or folder icon based on file path)  FieldLookupRenderer  (renders lookup values)  FieldNameRenderer  (renders document's name as a link)  FieldTaxonomyRenderer  (renders terms from Managed Metadata field)  FieldTextRenderer  (renders simple text)  FieldTitleRenderer  (renders title either as a simple text or as a link to the Dislpay Form)  FieldUrlRenderer  (renders Hyperlink or Picture field value as a link or image)  FieldUserRenderer  (renders each referenced user/group as a link on a separate line)", 
+            "title": "Available Controls"
+        }, 
+        {
+            "location": "/controls/fields/FieldRendererHelper/", 
+            "text": "FieldRendererHelper class\n\n\nFieldRendererHelper class is used to automatically apply needed Field Control based on current Field parameters.\n\n\nHow to use this class in your solutions\n\n\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\n\n\n\n\nImport the following modules to your component:\n\n\n\n\n\n\nimport\n \n{\n \nFieldRendererHelper\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/Utilities/FieldRendererHelper\n;\n\n\n\n\n\n\n\n\nUse the \nFieldRendererHelper.getFieldRenderer\n method to asynchronously request proper React control (As the method returns \nPromise\n it should be called in one of React component lifecycle methods, for example, \ncomponentWillMount\n that will occur before \nrender\n):\n\n\n\n\npublic\n \ncomponentWillMount() {\n\n    \nFieldRendererHelper\n.\ngetFieldRenderer\n(\nfieldValue\n,\n \n{\n\n      \nclassName\n: \nthis.props.className\n,\n\n      \ncssProps\n: \nthis.props.cssProps\n\n    \n},\n \nthis\n.\nprops\n.\nlistItem\n,\n \nthis\n.\nprops\n.\ncontext\n).\nthen\n(\nfieldRenderer\n \n=\n \n{\n\n        \n// update state to re-render the Field Customizer\n\n      \nthis\n.\nsetState\n({\n\n        \nfieldRenderer\n: \nfieldRenderer\n\n      \n});\n\n    \n});\n\n  \n}\n\n\n\n\n\n\n\n\nRender the requestted \nfieldRenderer\n:\n\n\n\n\npublic\n \nrender\n()\n:\n \nReact\n.\nReactElement\n{}\n \n{\n\n    \nreturn\n \n(\n\n      \ndiv\n \nclassName\n=\n{\nstyles\n.\ncell\n}\n\n        \n{\nthis\n.\nstate\n.\nfieldRenderer\n}\n\n      \n/div\n\n    \n);\n\n  \n}\n\n\n\n\n\n\nImplementation\n\n\nThe FieldRendererHelper class contains single method \ngetFieldRenderer\n with next signature:\n\n\npublic\n \nstatic\n \ngetFieldRenderer\n(\nfieldValue\n: \nany\n,\n \nprops\n: \nIFieldRendererProps\n,\n \nlistItem\n: \nListItemAccessor\n,\n \ncontext\n: \nIContext\n)\n:\n \nPromise\nJSX\n.\nElement\n\n\n\n\n\n\nParameters:\n\n\n\n\n\n\n\n\nParameter\n\n\nType\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\nfieldValue\n\n\nany\n\n\nValue of the field.\n\n\n\n\n\n\nprops\n\n\nIFieldRendererProps\n\n\nBasic properties interface for Field Controls. Contains \nclassName\n and \ncssProps\n properties\n\n\n\n\n\n\nlistItem\n\n\nListItemAccessor\n\n\nCurrent List Item\n\n\n\n\n\n\ncontext\n\n\nIContext\n\n\nSPFx Context", 
+            "title": "FieldRendererHelper"
+        }, 
+        {
+            "location": "/controls/fields/FieldRendererHelper/#fieldrendererhelper-class", 
+            "text": "FieldRendererHelper class is used to automatically apply needed Field Control based on current Field parameters.", 
+            "title": "FieldRendererHelper class"
+        }, 
+        {
+            "location": "/controls/fields/FieldRendererHelper/#how-to-use-this-class-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.    Import the following modules to your component:    import   {   FieldRendererHelper   }   from   @pnp/spfx-controls-react/lib/Utilities/FieldRendererHelper ;    Use the  FieldRendererHelper.getFieldRenderer  method to asynchronously request proper React control (As the method returns  Promise  it should be called in one of React component lifecycle methods, for example,  componentWillMount  that will occur before  render ):   public   componentWillMount() { \n     FieldRendererHelper . getFieldRenderer ( fieldValue ,   { \n       className :  this.props.className , \n       cssProps :  this.props.cssProps \n     },   this . props . listItem ,   this . props . context ). then ( fieldRenderer   =   { \n         // update state to re-render the Field Customizer \n       this . setState ({ \n         fieldRenderer :  fieldRenderer \n       }); \n     }); \n   }    Render the requestted  fieldRenderer :   public   render () :   React . ReactElement {}   { \n     return   ( \n       div   className = { styles . cell } \n         { this . state . fieldRenderer } \n       /div \n     ); \n   }", 
+            "title": "How to use this class in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldRendererHelper/#implementation", 
+            "text": "The FieldRendererHelper class contains single method  getFieldRenderer  with next signature:  public   static   getFieldRenderer ( fieldValue :  any ,   props :  IFieldRendererProps ,   listItem :  ListItemAccessor ,   context :  IContext ) :   Promise JSX . Element   Parameters:     Parameter  Type  Description      fieldValue  any  Value of the field.    props  IFieldRendererProps  Basic properties interface for Field Controls. Contains  className  and  cssProps  properties    listItem  ListItemAccessor  Current List Item    context  IContext  SPFx Context", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldAttachmentsRenderer/", 
+            "text": "FieldAttachmentsRenderer control\n\n\nThis control renders Clip icon based on the provided \ncount\n property is defined and greater than 0.\n\n\n\n\nNote:\n this control displays correctly starting with SharePoint Framework v1.4\n\n\nCovered Fields\n\n\n\n\nAttachments\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldAttachmentsRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldAttachmentsRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldAttachmentsRenderer\n control in your code as follows:\n\n\n\n\nFieldAttachmentsRenderer\n \ncount\n=\n{\nevent\n.\nfieldValue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldAttachmentsRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ncount\n\n\nnumber\n\n\nno\n\n\nAmount of attachments. The icon is displayed if the property is defined and greater than 0", 
+            "title": "FieldAttachmentsRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldAttachmentsRenderer/#fieldattachmentsrenderer-control", 
+            "text": "This control renders Clip icon based on the provided  count  property is defined and greater than 0.   Note:  this control displays correctly starting with SharePoint Framework v1.4", 
+            "title": "FieldAttachmentsRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldAttachmentsRenderer/#covered-fields", 
+            "text": "Attachments", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldAttachmentsRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldAttachmentsRenderer   }   from   @pnp/spfx-controls-react/lib/FieldAttachmentsRenderer ;    Use the  FieldAttachmentsRenderer  control in your code as follows:   FieldAttachmentsRenderer   count = { event . fieldValue }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldAttachmentsRenderer/#implementation", 
+            "text": "The FieldAttachmentsRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    count  number  no  Amount of attachments. The icon is displayed if the property is defined and greater than 0", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldDateRenderer/", 
+            "text": "FieldDateRenderer control\n\n\nThis control renders date string as a simple text.\n\n\n\n\nCovered Fields\n\n\n\n\nDate and Time\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldDateRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldDateRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldDateRenderer\n control in your code as follows:\n\n\n\n\nFieldDateRenderer\n \ntext\n=\n{\nevent\n.\nfieldValue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nNote:\n FieldDateRenderer doesn't provide functionality to render date in friendly format. It just renders the provided text as is. To learn more about friendly formatting please refer to \nFieldRendererHelper\n implementation.\n\n\nImplementation\n\n\nThe FieldDateRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ntext\n\n\nstring\n\n\nno\n\n\nText to be rendered", 
+            "title": "FieldDateRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldDateRenderer/#fielddaterenderer-control", 
+            "text": "This control renders date string as a simple text.", 
+            "title": "FieldDateRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldDateRenderer/#covered-fields", 
+            "text": "Date and Time", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldDateRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldDateRenderer   }   from   @pnp/spfx-controls-react/lib/FieldDateRenderer ;    Use the  FieldDateRenderer  control in your code as follows:   FieldDateRenderer   text = { event . fieldValue }   className = { some-class }   cssProps = {{   background :   #f00   }}   /   Note:  FieldDateRenderer doesn't provide functionality to render date in friendly format. It just renders the provided text as is. To learn more about friendly formatting please refer to  FieldRendererHelper  implementation.", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldDateRenderer/#implementation", 
+            "text": "The FieldDateRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    text  string  no  Text to be rendered", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldFileTypeRenderer/", 
+            "text": "FieldFileTypeRenderer control\n\n\nThis control renders document or folder icon based on file path. Office UI Fabric icons font is used to render the icons.\n\n\nNote:\n this control displays correctly starting with SharePoint Framework v1.4\n\n\n\n\nCovered Fields\n\n\n\n\nType (DocIcon)\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldFileTypeRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldFileTypeRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldFileTypeRenderer\n control in your code as follows:\n\n\n\n\nFieldFileTypeRenderer\n \npath\n=\n{\nfileLeafRef\n}\n \nisFolder\n=\n{\nfalse\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldFileTypeRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\npath\n\n\nstring\n\n\nyes\n\n\ndocument/file path\n\n\n\n\n\n\nisFolder\n\n\nboolean\n\n\nno\n\n\ntrue if the icon should be rendered for a folder, not file", 
+            "title": "FieldFileTypeRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldFileTypeRenderer/#fieldfiletyperenderer-control", 
+            "text": "This control renders document or folder icon based on file path. Office UI Fabric icons font is used to render the icons.  Note:  this control displays correctly starting with SharePoint Framework v1.4", 
+            "title": "FieldFileTypeRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldFileTypeRenderer/#covered-fields", 
+            "text": "Type (DocIcon)", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldFileTypeRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldFileTypeRenderer   }   from   @pnp/spfx-controls-react/lib/FieldFileTypeRenderer ;    Use the  FieldFileTypeRenderer  control in your code as follows:   FieldFileTypeRenderer   path = { fileLeafRef }   isFolder = { false }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldFileTypeRenderer/#implementation", 
+            "text": "The FieldFileTypeRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    path  string  yes  document/file path    isFolder  boolean  no  true if the icon should be rendered for a folder, not file", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldLookupRenderer/", 
+            "text": "FieldLookupRenderer control\n\n\nThis control renders lookup values. Each lookup item is clickable. Click on the lookup item leads to opening of referenced item's display form.\n\n\nNote:\n this control displays correctly starting with SharePoint Framework v1.4\n\n\n\n\n\n\nCovered Fields\n\n\n\n\nLookup (single, multi)\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldLookupRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldLookupRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldLookupRenderer\n control in your code as follows:\n\n\n\n\nFieldLookupRenderer\n \nlookups\n=\n{\nevent\n.\nfieldValue\n}\n \ndispFormUrl\n=\n{\nhttps://contoso.sharepoint.com/_layouts/15/listform.aspx?PageType=4\nListId={list_id}\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldLookupRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\nlookups\n\n\nISPFieldLookupValue[]\n\n\nyes\n\n\nLookup field values.\n\n\n\n\n\n\ndispFormUrl\n\n\nboolean\n\n\nno\n\n\nUrl of Display form for the list that is referenced by the lookup.\n\n\n\n\n\n\nonClick\n\n\n(args: ILookupClickEventArgs) =\n {}\n\n\nno\n\n\nCustom event handler of lookup item click. If not set the dialog with Display Form will be shown.", 
+            "title": "FieldLookupRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldLookupRenderer/#fieldlookuprenderer-control", 
+            "text": "This control renders lookup values. Each lookup item is clickable. Click on the lookup item leads to opening of referenced item's display form.  Note:  this control displays correctly starting with SharePoint Framework v1.4", 
+            "title": "FieldLookupRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldLookupRenderer/#covered-fields", 
+            "text": "Lookup (single, multi)", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldLookupRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldLookupRenderer   }   from   @pnp/spfx-controls-react/lib/FieldLookupRenderer ;    Use the  FieldLookupRenderer  control in your code as follows:   FieldLookupRenderer   lookups = { event . fieldValue }   dispFormUrl = { https://contoso.sharepoint.com/_layouts/15/listform.aspx?PageType=4 ListId={list_id} }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldLookupRenderer/#implementation", 
+            "text": "The FieldLookupRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    lookups  ISPFieldLookupValue[]  yes  Lookup field values.    dispFormUrl  boolean  no  Url of Display form for the list that is referenced by the lookup.    onClick  (args: ILookupClickEventArgs) =  {}  no  Custom event handler of lookup item click. If not set the dialog with Display Form will be shown.", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldNameRenderer/", 
+            "text": "FieldNameRenderer control\n\n\nThis control renders document's name as a link. The link provides either preview (if it is available) or direct download. Additionally, new documents are marked with \"Glimmer\" icon.\n\n\nNote:\n The Name column in document libraries is marked as noneditable. See \nthis issue\n for details.\n\nNote\n Glimmer icon displays correctly starting with SharePoint Framework v1.4\n\n\n\n\nCovered Fields\n\n\n\n\nDocument Name (LinkFilename, LinkFilenameNomenu, FileLieafRef)\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldNameRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldNameRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldNameRenderer\n control in your code as follows:\n\n\n\n\nFieldNameRenderer\n \ntext\n=\n{\nTechnical Requirements\n}\n \nisLink\n=\n{\ntrue\n}\n \nisNew\n=\n{\nfalse\n}\n \nfilePath\n=\n{\nhttps://contoso.sharepoint.com/Documents/tech-requirements.pdf\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldNameRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ntext\n\n\nstring\n\n\nno\n\n\nText to be rendered.\n\n\n\n\n\n\nisLink\n\n\nboolean\n\n\nyes\n\n\nTrue if the name should be rendered as a link.\n\n\n\n\n\n\nisNew\n\n\nboolean\n\n\nno\n\n\nTrue if the document is new.\n\n\n\n\n\n\nfilePath\n\n\nstring\n\n\nno\n\n\nPath to the document.\n\n\n\n\n\n\nhasPreview\n\n\nboolean\n\n\nno\n\n\nTrue if the document has preview (true by default)\n\n\n\n\n\n\nonClick\n\n\n(args: INameClickEventArgs) =\n {}\n\n\nno\n\n\nCustom handler for link click. If not set link click will lead to rendering document preview.", 
+            "title": "FieldNameRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldNameRenderer/#fieldnamerenderer-control", 
+            "text": "This control renders document's name as a link. The link provides either preview (if it is available) or direct download. Additionally, new documents are marked with \"Glimmer\" icon.  Note:  The Name column in document libraries is marked as noneditable. See  this issue  for details. Note  Glimmer icon displays correctly starting with SharePoint Framework v1.4", 
+            "title": "FieldNameRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldNameRenderer/#covered-fields", 
+            "text": "Document Name (LinkFilename, LinkFilenameNomenu, FileLieafRef)", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldNameRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldNameRenderer   }   from   @pnp/spfx-controls-react/lib/FieldNameRenderer ;    Use the  FieldNameRenderer  control in your code as follows:   FieldNameRenderer   text = { Technical Requirements }   isLink = { true }   isNew = { false }   filePath = { https://contoso.sharepoint.com/Documents/tech-requirements.pdf }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldNameRenderer/#implementation", 
+            "text": "The FieldNameRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    text  string  no  Text to be rendered.    isLink  boolean  yes  True if the name should be rendered as a link.    isNew  boolean  no  True if the document is new.    filePath  string  no  Path to the document.    hasPreview  boolean  no  True if the document has preview (true by default)    onClick  (args: INameClickEventArgs) =  {}  no  Custom handler for link click. If not set link click will lead to rendering document preview.", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldTaxonomyRenderer/", 
+            "text": "FieldTaxonomyRenderer control\n\n\nThis control renders terms from Managed Metadata field.\n\n\n\n\nCovered Fields\n\n\n\n\nManaged Metadata\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldTaxonomyRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldTaxonomyRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldTaxonomyRenderer\n control in your code as follows:\n\n\n\n\nFieldTaxonomyRenderer\n \nterms\n=\n{\nevent\n.\nfieldValue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldTaxonomyRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\nterms\n\n\nITerm[]\n\n\nyes\n\n\nManaged Metadata terms.", 
+            "title": "FieldTaxonomyRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldTaxonomyRenderer/#fieldtaxonomyrenderer-control", 
+            "text": "This control renders terms from Managed Metadata field.", 
+            "title": "FieldTaxonomyRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldTaxonomyRenderer/#covered-fields", 
+            "text": "Managed Metadata", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldTaxonomyRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldTaxonomyRenderer   }   from   @pnp/spfx-controls-react/lib/FieldTaxonomyRenderer ;    Use the  FieldTaxonomyRenderer  control in your code as follows:   FieldTaxonomyRenderer   terms = { event . fieldValue }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldTaxonomyRenderer/#implementation", 
+            "text": "The FieldTaxonomyRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    terms  ITerm[]  yes  Managed Metadata terms.", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldTextRenderer/", 
+            "text": "FieldTextRenderer control\n\n\nThis control renders simple text.\n\n\n\n\nCovered Fields\n\n\n\n\nSingle line of text\n\n\nMultiple lines of text\n\n\nChoice\n\n\nNumber\n\n\nCurrency\n\n\nYes/No\n\n\nDefault renderer for uncovered types of fields\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldTextRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldTextRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldTextRenderer\n control in your code as follows:\n\n\n\n\nFieldTextRenderer\n \ntext\n=\n{\nevent\n.\nfieldValue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldTextRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ntext\n\n\nstring\n\n\nno\n\n\nText to be rendered", 
+            "title": "FieldTextRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldTextRenderer/#fieldtextrenderer-control", 
+            "text": "This control renders simple text.", 
+            "title": "FieldTextRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldTextRenderer/#covered-fields", 
+            "text": "Single line of text  Multiple lines of text  Choice  Number  Currency  Yes/No  Default renderer for uncovered types of fields", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldTextRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldTextRenderer   }   from   @pnp/spfx-controls-react/lib/FieldTextRenderer ;    Use the  FieldTextRenderer  control in your code as follows:   FieldTextRenderer   text = { event . fieldValue }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldTextRenderer/#implementation", 
+            "text": "The FieldTextRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    text  string  no  Text to be rendered", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldTitleRenderer/", 
+            "text": "FieldTitleRenderer control\n\n\nThis control renders title either as a simple text or as a link to the Dislpay Form. Additional actions like Share and Context Menu are not implemented.\n\n\n\n\nCovered Fields\n\n\n\n\nList Item Title (Title, LinkTitle, LinkTitleNoMenu)\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldTitleRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldTitleRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldTitleRenderer\n control in your code as follows:\n\n\n\n\nFieldTitleRenderer\n \ntext\n=\n{\nTechnical Requirements\n}\n \nisLink\n=\n{\ntrue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldTitleRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ntext\n\n\nstring\n\n\nno\n\n\nText to be rendered.\n\n\n\n\n\n\nisLink\n\n\nboolean\n\n\nyes\n\n\nTrue if the name should be rendered as a link.\n\n\n\n\n\n\nbaseUrl\n\n\nstring\n\n\nno\n\n\nWeb Url. Should be provided if \nonClick\n is not defined\n\n\n\n\n\n\nlistId\n\n\nstring\n\n\nno\n\n\nList Id. Should be provided if \nonClick\n is not defined\n\n\n\n\n\n\nid\n\n\nnumber\n\n\nno\n\n\nItem Id. Should be provided if \nonClick\n is not defined\n\n\n\n\n\n\nonClick\n\n\n(args: ITitleClickEventArgs) =\n {}\n\n\nno\n\n\nCustom title click event handler. If not set Display form for the item will be displayed.", 
+            "title": "FieldTitleRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldTitleRenderer/#fieldtitlerenderer-control", 
+            "text": "This control renders title either as a simple text or as a link to the Dislpay Form. Additional actions like Share and Context Menu are not implemented.", 
+            "title": "FieldTitleRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldTitleRenderer/#covered-fields", 
+            "text": "List Item Title (Title, LinkTitle, LinkTitleNoMenu)", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldTitleRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldTitleRenderer   }   from   @pnp/spfx-controls-react/lib/FieldTitleRenderer ;    Use the  FieldTitleRenderer  control in your code as follows:   FieldTitleRenderer   text = { Technical Requirements }   isLink = { true }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldTitleRenderer/#implementation", 
+            "text": "The FieldTitleRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    text  string  no  Text to be rendered.    isLink  boolean  yes  True if the name should be rendered as a link.    baseUrl  string  no  Web Url. Should be provided if  onClick  is not defined    listId  string  no  List Id. Should be provided if  onClick  is not defined    id  number  no  Item Id. Should be provided if  onClick  is not defined    onClick  (args: ITitleClickEventArgs) =  {}  no  Custom title click event handler. If not set Display form for the item will be displayed.", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldUrlRenderer/", 
+            "text": "FieldUrlRenderer control\n\n\nThis control renders Hyperlink or Picture field value as a link or image.\n\n\n\n\n\n\nCovered Fields\n\n\n\n\nHyperlink or Image\n\n\nUrl in Links List\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldUrlRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldUrlRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldUrlRenderer\n control in your code as follows:\n\n\n\n\n// to show Url\n\n\nFieldUrlRenderer\n \ntext\n=\n{\nmicrosoft\n}\n \nurl\n=\n{\nhttp://www.microsoft.com\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n// to show Image\n\n\nFieldUrlRenderer\n \nurl\n=\n{\nhttp://cdn.contoso.com/images/logo.png\n}\n \nisImageUrl\n=\n{\ntrue\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldUrlRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\ntext\n\n\nstring\n\n\nno\n\n\nText to be rendered.\n\n\n\n\n\n\nurl\n\n\nstring\n\n\nyes\n\n\nUrl.\n\n\n\n\n\n\nisImageUrl\n\n\nboolean\n\n\nno\n\n\nTrue if the control should be rendered as an image.", 
+            "title": "FieldUrlRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldUrlRenderer/#fieldurlrenderer-control", 
+            "text": "This control renders Hyperlink or Picture field value as a link or image.", 
+            "title": "FieldUrlRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldUrlRenderer/#covered-fields", 
+            "text": "Hyperlink or Image  Url in Links List", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldUrlRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldUrlRenderer   }   from   @pnp/spfx-controls-react/lib/FieldUrlRenderer ;    Use the  FieldUrlRenderer  control in your code as follows:   // to show Url  FieldUrlRenderer   text = { microsoft }   url = { http://www.microsoft.com }   className = { some-class }   cssProps = {{   background :   #f00   }}   /  // to show Image  FieldUrlRenderer   url = { http://cdn.contoso.com/images/logo.png }   isImageUrl = { true }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldUrlRenderer/#implementation", 
+            "text": "The FieldUrlRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    text  string  no  Text to be rendered.    url  string  yes  Url.    isImageUrl  boolean  no  True if the control should be rendered as an image.", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/controls/fields/FieldUserRenderer/", 
+            "text": "FieldUserRenderer control\n\n\nThis control renders each referenced user/group as a link on a separate line. Hovering the link for users (not groups) leads to opening of Persona control.\n\n\n\n\n\n\nNote:\n some icons may be rendered incorrectly if used with SharePoint Framework v1.3 or earlier\n\n\nCovered Fields\n\n\n\n\nPerson or Group\n\n\n\n\nHow to use this control in your solutions\n\n\n\n\nCheck that you installed the \n@pnp/spfx-controls-react\n dependency. Check out the \ngetting started\n page for more information about installing the dependency.\n\n\nImport the following modules to your component:\n\n\n\n\nimport\n \n{\n \nFieldUserRenderer\n \n}\n \nfrom\n \n@pnp/spfx-controls-react/lib/FieldUserRenderer\n;\n\n\n\n\n\n\n\n\nUse the \nFieldUserRenderer\n control in your code as follows:\n\n\n\n\nFieldUserRenderer\n \nusers\n=\n{\nevent\n.\nfieldValue\n}\n \ncontext\n=\n{\nthis\n.\ncontext\n}\n \nclassName\n=\n{\nsome-class\n}\n \ncssProps\n=\n{{\n \nbackground\n:\n \n#f00\n \n}}\n \n/\n\n\n\n\n\n\nImplementation\n\n\nThe FieldUserRenderer component can be configured with the following properties:\n\n\n\n\n\n\n\n\nProperty\n\n\nType\n\n\nRequired\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\ncssProps\n\n\nReact.CSSProperties\n\n\nno\n\n\nCSS styles to apply to the renderer.\n\n\n\n\n\n\nclassName\n\n\nICssInput\n\n\nno\n\n\nCSS classes to apply to the renderer.\n\n\n\n\n\n\nusers\n\n\nIPrincipal\n\n\nno\n\n\nUsers/groups to be displayed as they appear in \nevent.fieldValue\n for Field Customizer's \nonRenderCell\n event.\n\n\n\n\n\n\ncontext\n\n\nIContext\n\n\nyes\n\n\nSPFx context.", 
+            "title": "FieldUserRenderer"
+        }, 
+        {
+            "location": "/controls/fields/FieldUserRenderer/#fielduserrenderer-control", 
+            "text": "This control renders each referenced user/group as a link on a separate line. Hovering the link for users (not groups) leads to opening of Persona control.    Note:  some icons may be rendered incorrectly if used with SharePoint Framework v1.3 or earlier", 
+            "title": "FieldUserRenderer control"
+        }, 
+        {
+            "location": "/controls/fields/FieldUserRenderer/#covered-fields", 
+            "text": "Person or Group", 
+            "title": "Covered Fields"
+        }, 
+        {
+            "location": "/controls/fields/FieldUserRenderer/#how-to-use-this-control-in-your-solutions", 
+            "text": "Check that you installed the  @pnp/spfx-controls-react  dependency. Check out the  getting started  page for more information about installing the dependency.  Import the following modules to your component:   import   {   FieldUserRenderer   }   from   @pnp/spfx-controls-react/lib/FieldUserRenderer ;    Use the  FieldUserRenderer  control in your code as follows:   FieldUserRenderer   users = { event . fieldValue }   context = { this . context }   className = { some-class }   cssProps = {{   background :   #f00   }}   /", 
+            "title": "How to use this control in your solutions"
+        }, 
+        {
+            "location": "/controls/fields/FieldUserRenderer/#implementation", 
+            "text": "The FieldUserRenderer component can be configured with the following properties:     Property  Type  Required  Description      cssProps  React.CSSProperties  no  CSS styles to apply to the renderer.    className  ICssInput  no  CSS classes to apply to the renderer.    users  IPrincipal  no  Users/groups to be displayed as they appear in  event.fieldValue  for Field Customizer's  onRenderCell  event.    context  IContext  yes  SPFx context.", 
+            "title": "Implementation"
+        }, 
+        {
             "location": "/about/release-notes/", 
-            "text": "Releases\n\n\n1.1.3\n\n\n\n\nFileTypeIcon\n icon fixed. This control should now also work in SPFx extensions.\n\n\n\n\n1.1.2\n\n\n\n\nFix for WebPartTitle control to inherit color\n\n\nImproved telemetry with some object checks\n\n\n\n\n1.1.1\n\n\n\n\nRemoved operation name from telemetry\n\n\n\n\n1.1.0\n\n\n\n\nTelemetry added\n\n\n\n\n1.0.0\n\n\n\n\nNew control\n: WebPartTitle control got added.\n\n\nEnhancement\n: ListView control got extended with the ability to specify a set of preselected items.\n\n\n\n\nBeta 1.0.0-beta.8\n\n\n\n\nBug fix\n: bug fix for the \nListView\n control when selection is used in combination with \nsetState\n.\n\n\n\n\nBeta 1.0.0-beta.7\n\n\nAdded\n\n- Grouping functionality added to the \nListView\n control\n\n\nBeta 1.0.0-beta.6\n\n\n\n\nInitial release", 
+            "text": "Releases\n\n\n1.2.0\n\n\nNew controls\n\n\n\n\nField controls are added to the project\n\n\nIFrameDialog\n was added to the project\n\n\n\n\nFixes\n\n\n\n\nFixed theming in the \nWebPartTitle\n control\n\n\n\n\n1.1.3\n\n\n\n\nFileTypeIcon\n icon fixed. This control should now also work in SPFx extensions.\n\n\n\n\n1.1.2\n\n\n\n\nFix for WebPartTitle control to inherit color\n\n\nImproved telemetry with some object checks\n\n\n\n\n1.1.1\n\n\n\n\nRemoved operation name from telemetry\n\n\n\n\n1.1.0\n\n\n\n\nTelemetry added\n\n\n\n\n1.0.0\n\n\n\n\nNew control\n: WebPartTitle control got added.\n\n\nEnhancement\n: ListView control got extended with the ability to specify a set of preselected items.\n\n\n\n\nBeta 1.0.0-beta.8\n\n\n\n\nBug fix\n: bug fix for the \nListView\n control when selection is used in combination with \nsetState\n.\n\n\n\n\nBeta 1.0.0-beta.7\n\n\nAdded\n\n- Grouping functionality added to the \nListView\n control\n\n\nBeta 1.0.0-beta.6\n\n\n\n\nInitial release", 
             "title": "Release notes"
         }, 
         {
             "location": "/about/release-notes/#releases", 
             "text": "", 
             "title": "Releases"
+        }, 
+        {
+            "location": "/about/release-notes/#120", 
+            "text": "New controls   Field controls are added to the project  IFrameDialog  was added to the project   Fixes   Fixed theming in the  WebPartTitle  control", 
+            "title": "1.2.0"
         }, 
         {
             "location": "/about/release-notes/#113", 

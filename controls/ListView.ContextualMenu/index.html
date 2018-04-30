@@ -36,7 +36,7 @@
     
     
       
-        <title>ListView - SharePoint Framework React Controls</title>
+        <title>ListView: add a contextual menu - SharePoint Framework React Controls</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
     
-      <a href="#listview-control" tabindex="1" class="md-skip">
+      <a href="#listview-add-a-contextual-menu" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -119,7 +119,7 @@
                 SharePoint Framework React Controls
               </span>
               <span class="md-header-nav__topic">
-                ListView
+                ListView: add a contextual menu
               </span>
             
           
@@ -342,6 +342,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../ListView/" title="ListView" class="md-nav__link">
+      ListView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -353,11 +365,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        ListView
+        ListView: add a contextual menu
       </label>
     
-    <a href="./" title="ListView" class="md-nav__link md-nav__link--active">
-      ListView
+    <a href="./" title="ListView: add a contextual menu" class="md-nav__link md-nav__link--active">
+      ListView: add a contextual menu
     </a>
     
       
@@ -371,15 +383,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
-    How to use this control in your solutions
+  <a href="#the-contextualmenu-component" title="The ContextualMenu component" class="md-nav__link">
+    The ContextualMenu component
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" title="Implementation" class="md-nav__link">
-    Implementation
+  <a href="#the-listview-column" title="The ListView column" class="md-nav__link">
+    The ListView column
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-result" title="The result" class="md-nav__link">
+    The result
   </a>
   
 </li>
@@ -392,18 +411,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../ListView.ContextualMenu/" title="ListView: add a contextual menu" class="md-nav__link">
-      ListView: add a contextual menu
-    </a>
   </li>
 
         
@@ -721,15 +728,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use-this-control-in-your-solutions" title="How to use this control in your solutions" class="md-nav__link">
-    How to use this control in your solutions
+  <a href="#the-contextualmenu-component" title="The ContextualMenu component" class="md-nav__link">
+    The ContextualMenu component
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#implementation" title="Implementation" class="md-nav__link">
-    Implementation
+  <a href="#the-listview-column" title="The ListView column" class="md-nav__link">
+    The ListView column
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-result" title="The result" class="md-nav__link">
+    The result
   </a>
   
 </li>
@@ -750,228 +764,107 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SharePoint/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/controls/ListView.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/SharePoint/sp-dev-fx-controls-react/blob/master/docs/documentation/docs/controls/ListView.ContextualMenu.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="listview-control">ListView control<a class="headerlink" href="#listview-control" title="Permanent link">&para;</a></h1>
-<p>This control renders a list view for the given set of items.</p>
-<p><img alt="ListView control output" src="../../assets/ListView.png" /></p>
-<p><strong>List view control with grouping applied</strong></p>
-<p><img alt="ListView control with grouping" src="../../assets/ListView-grouping.png" /></p>
-<h2 id="how-to-use-this-control-in-your-solutions">How to use this control in your solutions<a class="headerlink" href="#how-to-use-this-control-in-your-solutions" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Check that you installed the <code>@pnp/spfx-controls-react</code> dependency. Check out the <a href="../../#getting-started">getting started</a> page for more information about installing the dependency.</li>
-<li>Import the following modules to your component:</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">ListView</span><span class="p">,</span> <span class="nx">IViewField</span><span class="p">,</span> <span class="nx">SelectionMode</span><span class="p">,</span> <span class="nx">GroupOrder</span><span class="p">,</span> <span class="nx">IGrouping</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/ListView&quot;</span><span class="p">;</span>
-</pre></div>
+                <h1 id="listview-add-a-contextual-menu">ListView: Add a contextual menu<a class="headerlink" href="#listview-add-a-contextual-menu" title="Permanent link">&para;</a></h1>
+<h2 id="the-contextualmenu-component">The ContextualMenu component<a class="headerlink" href="#the-contextualmenu-component" title="Permanent link">&para;</a></h2>
+<p>In order to create a contextual menu for your list view, you first need to create a new component which will use a combination of an <a href="https://developer.microsoft.com/en-us/fabric#/components/button#Variants">IconButton</a> and <a href="https://developer.microsoft.com/en-us/fabric#/components/contextualmenu">ContextualMenu</a> controls from the Office UI Fabric React.</p>
+<p>Here is some sample code:</p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">Layer</span><span class="p">,</span> <span class="nx">IconButton</span><span class="p">,</span> <span class="nx">IButtonProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;office-ui-fabric-react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ContextualMenuItemType</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;office-ui-fabric-react/lib/ContextualMenu&#39;</span><span class="p">;</span>
+<span class="c1">// The following are project specific components</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">IECBProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./IECBProps&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">styles</span> <span class="nx">from</span> <span class="s1">&#39;./ECB.module.scss&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">IListitem</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../../model/IListitem&#39;</span><span class="p">;</span>
 
+<span class="kr">export</span> <span class="kr">class</span> <span class="nx">ECB</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="o">&lt;</span><span class="nx">IECBProps</span><span class="p">,</span> <span class="p">{}</span><span class="o">&gt;</span> <span class="p">{</span>
 
-<ul>
-<li>Use the <code>ListView</code> control in your code as follows:</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">ListView</span>
-  <span class="nx">items</span><span class="o">=</span><span class="p">{</span><span class="nx">items</span><span class="p">}</span>
-  <span class="nx">viewFields</span><span class="o">=</span><span class="p">{</span><span class="nx">viewFields</span><span class="p">}</span>
-  <span class="nx">iconFieldName</span><span class="o">=</span><span class="s2">&quot;ServerRelativeUrl&quot;</span>
-  <span class="nx">compact</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
-  <span class="nx">selectionMode</span><span class="o">=</span><span class="p">{</span><span class="nx">SelectionMode</span><span class="p">.</span><span class="nx">multiple</span><span class="p">}</span>
-  <span class="nx">selection</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getSelection</span><span class="p">}</span>
-  <span class="nx">groupByFields</span><span class="o">=</span><span class="p">{</span><span class="nx">groupByFields</span><span class="p">}</span> <span class="o">/&gt;</span>
-</pre></div>
+  <span class="kr">public</span> <span class="kr">constructor</span><span class="p">(</span><span class="nx">props</span>: <span class="kt">IECBProps</span><span class="p">)</span> <span class="p">{</span>        
+    <span class="kr">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span>
 
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">panelOpen</span>: <span class="kt">false</span>
+    <span class="p">};</span>
+  <span class="p">}</span>
 
-<ul>
-<li>With the <code>selection</code> property you can define a method that which gets called when the user selects one or more items in the list view:</li>
-</ul>
-<div class="codehilite"><pre><span></span><span class="kr">private</span> <span class="nx">_getSelection</span><span class="p">(</span><span class="nx">items</span>: <span class="kt">any</span><span class="p">[])</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Selected items:&#39;</span><span class="p">,</span> <span class="nx">items</span><span class="p">);</span>
+  <span class="kr">public</span> <span class="nx">render() {</span>      
+    <span class="k">return</span> <span class="p">(</span>
+      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">ecb</span><span class="p">}</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">IconButton</span> <span class="nx">id</span><span class="o">=</span><span class="s1">&#39;ContextualMenuButton1&#39;</span>
+                    <span class="nx">className</span><span class="o">=</span><span class="p">{</span><span class="nx">styles</span><span class="p">.</span><span class="nx">ecbbutton</span><span class="p">}</span>
+                    <span class="nx">text</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+                    <span class="nx">width</span><span class="o">=</span><span class="s1">&#39;30&#39;</span>
+                    <span class="nx">split</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span>
+                    <span class="nx">iconProps</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span> <span class="nx">iconName</span><span class="o">:</span> <span class="s1">&#39;MoreVertical&#39;</span> <span class="p">}</span> <span class="p">}</span>
+                    <span class="nx">menuIconProps</span><span class="o">=</span><span class="p">{</span> <span class="p">{</span> <span class="nx">iconName</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="p">}</span> <span class="p">}</span>
+                    <span class="nx">menuProps</span><span class="o">=</span><span class="p">{{</span>
+                      <span class="nx">shouldFocusOnMount</span>: <span class="kt">true</span><span class="p">,</span>
+                      <span class="nx">items</span><span class="o">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;action1&#39;</span><span class="p">,</span>
+                          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Action 1&#39;</span><span class="p">,</span>
+                          <span class="nx">onClick</span>: <span class="kt">this.handleClick.bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">Firstname</span> <span class="o">+</span> <span class="s1">&#39; Action 1&#39;</span><span class="p">)</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;divider_1&#39;</span><span class="p">,</span>
+                          <span class="nx">itemType</span>: <span class="kt">ContextualMenuItemType.Divider</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;action2&#39;</span><span class="p">,</span>
+                          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Action 2&#39;</span><span class="p">,</span>
+                          <span class="nx">onClick</span>: <span class="kt">this.handleClick.bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">Firstname</span> <span class="o">+</span> <span class="s1">&#39; Action 2&#39;</span><span class="p">)</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;action3&#39;</span><span class="p">,</span>
+                          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Action 3&#39;</span><span class="p">,</span>
+                          <span class="nx">onClick</span>: <span class="kt">this.handleClick.bind</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">item</span><span class="p">.</span><span class="nx">Lastname</span> <span class="o">+</span> <span class="s1">&#39; Action  3&#39;</span><span class="p">)</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                          <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;disabled&#39;</span><span class="p">,</span>
+                          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Disabled action&#39;</span><span class="p">,</span>
+                          <span class="nx">disabled</span>: <span class="kt">true</span><span class="p">,</span>
+                          <span class="nx">onClick</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Disabled action should not be clickable.&#39;</span><span class="p">)</span>
+                        <span class="p">}</span>
+                      <span class="p">]</span>
+                    <span class="p">}}</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="kr">private</span> <span class="nx">handleClick</span><span class="p">(</span><span class="nx">source</span>:<span class="kt">string</span><span class="p">,</span> <span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">source</span><span class="si">}</span><span class="sb"> clicked`</span><span class="p">);</span>
+  <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<ul>
-<li>With the <code>groupByFields</code> property you can define an array of field objects which will be used for grouping. </li>
-</ul>
-<p><strong>Important</strong>: the same order of the fields defines how grouping will be applied. In the snippet the <code>ListView</code> control will first group by the <code>Extension</code> and after that by the <code>Author</code> field.</p>
-<div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">groupByFields</span>: <span class="kt">IGrouping</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Extension&quot;</span><span class="p">,</span> 
-    <span class="nx">order</span>: <span class="kt">GroupOrder.ascending</span> 
-  <span class="p">},</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Author&quot;</span><span class="p">,</span> 
-    <span class="nx">order</span>: <span class="kt">GroupOrder.descending</span>
-  <span class="p">}</span>
-<span class="p">];</span>
+<h2 id="the-listview-column">The ListView column<a class="headerlink" href="#the-listview-column" title="Permanent link">&para;</a></h2>
+<p>Once the ECB component is created, you can add the contextual menu to the <code>ListView</code> control. In order to do this, you have to insert another <code>Viewfield</code> in code at the position of our choice. For instance after the <code>Lastname</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nx">sorting</span>: <span class="kt">false</span><span class="p">,</span>
+  <span class="nx">maxWidth</span>: <span class="kt">40</span><span class="p">,</span>
+  <span class="nx">render</span><span class="o">:</span> <span class="p">(</span><span class="nx">rowitem</span>: <span class="kt">IListitem</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">element</span>:<span class="kt">React.ReactElement</span><span class="o">&lt;</span><span class="nx">IECBProps</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+      <span class="nx">ECB</span><span class="p">,</span> 
+      <span class="p">{</span>
+        <span class="nx">item</span>: <span class="kt">rowitem</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+    <span class="k">return</span> <span class="nx">element</span><span class="p">;</span>
+  <span class="p">}</span>      
+<span class="p">}</span>
 </pre></div>
 
 
-<div class="admonition note">
-<p class="admonition-title">Extend ListView with a ContextualMenu</p>
-<p>To extend the <code>ListView</code> control with a <a href="https://developer.microsoft.com/en-us/fabric#/components/contextualmenu">ContextualMenu</a> refer to <a href="../ListView.ContextualMenu">ListView.ContextualMenu</a>.</p>
-</div>
-<h2 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">&para;</a></h2>
-<p>The ListView control can be configured with the following properties:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>iconFieldName</td>
-<td>string</td>
-<td>no</td>
-<td>Specify the name of the file URL path which will be used to show the file icon.</td>
-</tr>
-<tr>
-<td>items</td>
-<td>any[]</td>
-<td>yes</td>
-<td>Items to render in the list view.</td>
-</tr>
-<tr>
-<td>viewFields</td>
-<td>IViewField[]</td>
-<td>no</td>
-<td>The fields you want to render in the list view. Check the <code>IViewField</code> implementation to see which properties you can define.</td>
-</tr>
-<tr>
-<td>compact</td>
-<td>boolean</td>
-<td>no</td>
-<td>Boolean value to indicate if the control should render in compact mode. By default this is set to <code>false</code>.</td>
-</tr>
-<tr>
-<td>selectionMode</td>
-<td>SelectionMode</td>
-<td>no</td>
-<td>Specify if the items in the list view can be selected and how. Options are: none, single, multi.</td>
-</tr>
-<tr>
-<td>selection</td>
-<td>function</td>
-<td>no</td>
-<td>Selection event that passes the selected item(s) from the list view.</td>
-</tr>
-<tr>
-<td>groupByFields</td>
-<td>IGrouping[]</td>
-<td>no</td>
-<td>Defines the field on which you want to group the items in the list view.</td>
-</tr>
-<tr>
-<td>defaultSelection</td>
-<td>number[]</td>
-<td>no</td>
-<td>The index of the items to be select by default</td>
-</tr>
-</tbody>
-</table>
-<p>The <code>IViewField</code> has the following implementation:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>yes</td>
-<td>Name of the field.</td>
-</tr>
-<tr>
-<td>displayName</td>
-<td>string</td>
-<td>no</td>
-<td>Name that will be used as the column title. If not defined, the name property will be used.</td>
-</tr>
-<tr>
-<td>linkPropertyName</td>
-<td>string</td>
-<td>no</td>
-<td>Specify the field name that needs to be used to render a link for the current field.</td>
-</tr>
-<tr>
-<td>sorting</td>
-<td>boolean</td>
-<td>no</td>
-<td>Specify if you want to enable sorting for the current field.</td>
-</tr>
-<tr>
-<td>maxWidth</td>
-<td>number</td>
-<td>no</td>
-<td>Specify the minimum width of the column.</td>
-</tr>
-<tr>
-<td>maxWidth</td>
-<td>number</td>
-<td>no</td>
-<td>Specify the maximum width of the column.</td>
-</tr>
-<tr>
-<td>render</td>
-<td>function</td>
-<td>no</td>
-<td>Override how the field has to get rendered.</td>
-</tr>
-</tbody>
-</table>
-<p>The <code>IGrouping</code> has the following implementation:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>yes</td>
-<td>Name of the field</td>
-</tr>
-<tr>
-<td>order</td>
-<td>GroupOrder</td>
-<td>yes</td>
-<td>Specify how the group needs to be ordered.</td>
-</tr>
-</tbody>
-</table>
-<p>enum <code>GroupOrder</code></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ascending</td>
-<td>Order the group in ascending order.</td>
-</tr>
-<tr>
-<td>descending</td>
-<td>Order the group in descending order.</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/ListView" /></p>
+<p>Inside the render method of the <code>IViewField</code>, the ECB component gets created and the current item will be used as a reference for the clicked row.</p>
+<h2 id="the-result">The result<a class="headerlink" href="#the-result" title="Permanent link">&para;</a></h2>
+<p>The result will look like the following:</p>
+<p><img alt="ContextualMenu_shown" src="../../assets/ListView.ContextualMenu.png" /></p>
+<p>Once you click on an action, you will see the alert:</p>
+<p><img alt="ContextualMenu_clicked" src="../../assets/ListView.ContextualMenu_clicked.png" /></p>
                 
                   
                 
@@ -992,7 +885,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../FileTypeIcon/" title="FileTypeIcon" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../ListView/" title="ListView" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1001,19 +894,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                FileTypeIcon
+                ListView
               </span>
             </div>
           </a>
         
         
-          <a href="../ListView.ContextualMenu/" title="ListView: add a contextual menu" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Placeholder/" title="Placeholder" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ListView: add a contextual menu
+                Placeholder
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
@@ -809,7 +809,7 @@
 <li>Check that you installed the <code>@pnp/spfx-controls-react</code> dependency. Check out the <a href="../#getting-started">getting started</a> page for more information about installing the dependency.</li>
 <li>Import the following modules to your component:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">PeoplePicker</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/PeoplePicker&quot;</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">PeoplePicker</span><span class="p">,</span> <span class="nx">PrincipalType</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@pnp/spfx-controls-react/lib/PeoplePicker&quot;</span><span class="p">;</span>
 </pre></div>
 
 
@@ -824,7 +824,9 @@
     <span class="nx">showtooltip</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
     <span class="nx">isRequired</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
     <span class="nx">disabled</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span>
-    <span class="nx">selectedItems</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getPeoplePickerItems</span><span class="p">}</span> <span class="o">/&gt;</span>
+    <span class="nx">selectedItems</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">_getPeoplePickerItems</span><span class="p">}</span>
+    <span class="nx">showHiddenInUI</span><span class="o">=</span><span class="p">{</span><span class="kc">false</span><span class="p">}</span>
+    <span class="nx">principleTypes</span><span class="o">=</span><span class="p">{[</span><span class="nx">PrincipalType</span><span class="p">.</span><span class="nx">User</span><span class="p">]}</span> <span class="o">/&gt;</span>
 </pre></div>
 
 
@@ -939,6 +941,47 @@
 <td>no</td>
 <td>Default selected user emails</td>
 </tr>
+<tr>
+<td>webAbsoluteUrl</td>
+<td>string</td>
+<td>no</td>
+<td>Specify the site URL on which you want to perform the user query call. Default is the current site URL.</td>
+</tr>
+<tr>
+<td>showHiddenInUI</td>
+<td>boolean</td>
+<td>no</td>
+<td>Show users which are hidden from the UI. By default these users/groups hidden for the UI will not be shown.</td>
+</tr>
+<tr>
+<td>principleTypes</td>
+<td>PrincipleType[]</td>
+<td>no</td>
+<td>Define which type of data you want to retrieve: User, SharePoint groups, Security groups. Multiple are possible.</td>
+</tr>
+</tbody>
+</table>
+<p>Enum <code>PrincipalType</code></p>
+<p>The <code>PrincipalType</code> enum can be used to specify the types of information you want to query: User, Security groups, and/or SharePoint groups.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User</td>
+</tr>
+<tr>
+<td>DistributionList</td>
+</tr>
+<tr>
+<td>SecurityGroup</td>
+</tr>
+<tr>
+<td>SharePointGroup</td>
+</tr>
 </tbody>
 </table>
 <p><img alt="" src="https://telemetry.sharepointpnp.com/sp-dev-fx-controls-react/wiki/controls/PeoplePicker" /></p>
@@ -1026,7 +1069,7 @@
     
       <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     

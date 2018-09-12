@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.4">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
@@ -887,13 +887,19 @@
 <td>hasPreview</td>
 <td>boolean</td>
 <td>no</td>
-<td>True if the document has preview (true by default)</td>
+<td>True if the document has preview and link href should be constructed to display the preview (instead of direct document's link). The flag works only if <code>onClick</code> property is NOT defined.</td>
 </tr>
 <tr>
 <td>onClick</td>
 <td>(args: INameClickEventArgs) =&gt; {}</td>
 <td>no</td>
-<td>Custom handler for link click. If not set link click will lead to rendering document preview.</td>
+<td>Custom handler for link click. If not set link click will lead to rendering document preview. Works if <code>isLink</code> is set to <code>true</code></td>
+</tr>
+<tr>
+<td>onDoubleClick</td>
+<td>(args: INameClickEventArgs) =&gt; {}</td>
+<td>no</td>
+<td>Custom handler for link double click. If not set link If not set link will use OOTB behavior. Works if <code>isLink</code> is set to <code>true</code></td>
 </tr>
 </tbody>
 </table>
@@ -982,7 +988,7 @@
     
       <script src="../../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.3",url:{base:"../../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../.."}})</script>
       
     
     

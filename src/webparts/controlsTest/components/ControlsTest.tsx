@@ -18,6 +18,8 @@ import { Environment, EnvironmentType } from '@microsoft/sp-core-library';
 import { SecurityTrimmedControl, PermissionLevel } from '../../../SecurityTrimmedControl';
 import { SPPermission } from '@microsoft/sp-page-context';
 import { PeoplePicker, PrincipalType } from '../../../PeoplePicker';
+import { getItemClassNames } from 'office-ui-fabric-react/lib/components/ContextualMenu/ContextualMenu.classNames';
+import { ListItemPicker } from "../../../ListItemPicker";
 
 /**
  * Component that can be used to test out the React controls from this project
@@ -30,7 +32,9 @@ export default class ControlsTest extends React.Component<IControlsTestProps, IC
       imgSize: ImageSize.small,
       items: [],
       iFrameDialogOpened: false,
-      initialValues: []
+      initialValues: [],
+      authorEmails: [],
+      selectedList: null
     };
 
     this._onIconSizeChange = this._onIconSizeChange.bind(this);
@@ -49,6 +53,18 @@ export default class ControlsTest extends React.Component<IControlsTestProps, IC
           items: items.value ? items.value : []
         });
       });
+
+      // // Get Authors in the SharePoint Document library -- For People Picker Testing
+      // const restAuthorApi = `${this.props.context.pageContext.web.absoluteUrl}/_api/web/lists/GetByTitle('Documents')/Items?$select=Id, Author/EMail&$expand=Author/EMail`;
+      // this.props.context.spHttpClient.get(restAuthorApi, SPHttpClient.configurations.v1)
+      // .then(resp => { return resp.json(); })
+      // .then(items => {
+      //   let emails : string[] = items.value ? items.value.map((item, key)=> { return item.Author.EMail}) : [];
+      //   console.log(emails);
+      //   this.setState({
+      //     authorEmails: emails
+      //   });
+      // });
   }
 
   /**
@@ -105,8 +121,11 @@ private onServicePickerChange(terms: IPickerTerms): void {
    * Selected lists change event
    * @param lists
    */
-  private onListPickerChange (lists: string | string[]) {
+  private onListPickerChange = (lists: string | string[]) => {
     console.log("Lists:", lists);
+    this.setState({
+      selectedList: typeof lists === "string" ? lists : lists.pop()
+    });
   }
 
   /**
@@ -121,11 +140,20 @@ private onServicePickerChange(terms: IPickerTerms): void {
       });
     }
   }
-  /** Method that retrieves the selected items from People  Picker
+
+  /**
+   * Method that retrieves the selected items from People  Picker
    * @param items
    */
   private _getPeoplePickerItems(items: any[]) {
     console.log('Items:', items);
+  }
+
+  /**
+   * Selected item from the list data picker
+   */
+  private listItemPickerDataSelected(item: any) {
+    console.log(item);
   }
 
   /**
@@ -248,6 +276,14 @@ private onServicePickerChange(terms: IPickerTerms): void {
                             onSelectionChanged={this.onListPickerChange} />
               </div>
 
+              <div className="ms-font-m">Field picker list data tester:
+                <ListItemPicker listId={this.state.selectedList}
+                                     columnInternalName="Title"
+                                     itemLimit={5}
+                                     context={this.props.context}
+                                     onSelectedItem={this.listItemPickerDataSelected} />
+              </div>
+
               <div className="ms-font-m">Services tester:
               <TaxonomyPicker
                 allowMultipleSelections={true}
@@ -347,7 +383,8 @@ private onServicePickerChange(terms: IPickerTerms): void {
             // groupName={"Team Site Owners"}
             showtooltip={true}
             isRequired={true}
-            defaultSelectedUsers={["tenantUser@domain.onmicrosoft.com", "test@user.com"]}
+            //defaultSelectedUsers={["tenantUser@domain.onmicrosoft.com", "test@user.com"]}
+            //defaultSelectedUsers={this.state.authorEmails}
             selectedItems={this._getPeoplePickerItems}
             showHiddenInUI={false}
             principleTypes={[PrincipalType.User]}
